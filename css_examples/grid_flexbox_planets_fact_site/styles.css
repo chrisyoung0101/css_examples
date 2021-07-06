@@ -1,0 +1,318 @@
+/* Flexbox */
+.flexbox-container-content {
+    display: flex;
+    position: relative;
+    
+    background-color: yellow;
+    flex-direction: column;
+}
+
+
+
+
+.flexbox-container-footer {
+    display: flex;
+    position: relative;
+    justify-content: space-between;
+    background-color: yellow;
+    
+}
+
+.flex-footer-item {
+    display: flex;
+    position: relative;
+    background-color: yellow;
+    min-height: 100px;
+
+}
+
+.flex-content {
+    display: flex;
+    position: relative;
+    background-color: yellow;
+    flex-direction: row;
+    min-height: 100px;
+}
+
+.flexbox-item-2 {
+    min-height: 200px;
+}
+
+.flexbox-item-3 {
+    min-height: 300px;
+}
+
+
+
+
+
+
+
+/* Grid  */
+
+.grid-container {
+    display: grid;
+    /* define rows or columns for the grid */
+    grid-template-columns: 2fr 1fr; /* col1 col2 */
+    grid-template-rows: 6fr 1fr; /* row1 row2 */
+    grid-auto-rows: minmax(650px, auto);
+    
+}
+
+.grid-item-3 { 
+    grid-column: 1/3; /*start line/end line   same as 1/-1*/
+}
+
+
+
+/* Grid Background Styles Only */
+
+@import url('https://fonts.googleapis.com/css?family=Raleway');
+
+* {
+    font-family: Raleway;
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+html, body {
+  background-color: #333;
+  height: 100%;
+  margin: 0;
+}
+
+.grid-container {
+  position: relative;
+  padding: 80px;
+  max-width: 100%;
+}
+
+.grid-item {
+  position: relative;
+  font-size: 25px;
+  padding: 20px;
+  padding-top: 50px;
+  background-color: #379AD6;
+  color: #222;
+  border: 1px solid white;
+}
+
+.grid-item:nth-child(odd) {
+  background-color: #5bbdfa;
+}
+
+.grid-item::before {
+  content: 'Grid Item';
+  position: absolute;
+  font-size: 25px;
+  font-weight: bold;
+  top: 10px;
+  left: 15px;
+}
+
+.grid-item::after {
+  position: absolute;
+  font-size: 25px;
+  top: 10px;
+  right: 15px;
+  font-weight: bold;
+}
+
+.grid-item-1::after {
+  content: '1';
+}
+
+.grid-item-2::after {
+  content: '2';
+}
+
+.grid-item-3::after {
+  content: '3';
+}
+
+.grid-item-4::after {
+  content: '4';
+}
+
+.grid-item-5::after {
+  content: '5';
+}
+
+.grid-item-6::after {
+  content: '6';
+}
+
+.grid-item-7::after {
+  content: '7';
+}
+
+.grid-item-8::after {
+  content: '8';
+}
+
+.grid-item-9::after {
+  content: '9';
+}
+
+.grid-item-10::after {
+  content: '10';
+}
+
+.grid-item-11::after {
+  content: '11';
+}
+
+.side-links {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+}
+
+.side-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  margin-bottom: 10px;
+  color: white;
+  width: 180px;
+  padding: 10px 0;
+  border-radius: 10px;
+}
+
+.side-link-youtube {
+  background-color: red;
+}
+
+.side-link-twitter {
+  background-color: #1DA1F2;
+}
+
+.side-link-github {
+  background-color: #6e5494;
+}
+
+.side-link-text {
+  margin-left: 10px;
+  font-size: 18px;
+}
+
+.side-link-icon {
+  color: white;
+  font-size: 30px;
+}
+
+/* Flexbox Background Styles */
+html {
+    /* height: 100%; */
+    /* background-color: #333; */
+    /* display: flex;
+    flex-direction: column;
+    justify-content: center; */
+}
+
+
+
+/* .flexbox-container::before {
+    content: 'Flexbox Container';
+    position: absolute;
+    top: -40px;
+    color: yellow;
+    font-size: 2em;
+} */
+
+.axis {
+    position: absolute;
+}
+
+.cross-axis {
+    left: 50%;
+    transform: translateX(-50%);
+    width: 5px;
+    height: 100%;
+    background-color: blue;
+}
+
+.main-axis {
+    top: 50%;
+    transform: translateY(-50%);
+    height: 5px;
+    width: 100%;
+    background-color: red;
+}
+
+.axis::after {
+    position: absolute;
+    right: 10px;
+    bottom: 10px;
+    font-size: 2em;
+}
+
+.main-axis::after {
+    position: absolute;
+    content: 'Main Axis';
+    color: red;
+}
+
+.cross-axis::after {
+    white-space: nowrap;
+    content: 'Cross Axis';
+    writing-mode: vertical-rl;
+    transform: rotate(180deg);
+    color: blue;
+}
+
+.flexbox-item {
+    position: relative;
+    width: 200px;
+    margin: 10px;
+    border: 3px solid #333;
+    background-color: #dfdfdf;
+    font-size: 100px;
+    display: flex;
+    justify-content: center;
+}
+
+.flexbox-item::before {
+    content: 'Flexbox Item';
+    position: absolute;
+    color: black;
+    font-size: 25px;
+    top: 10px;
+    left: 15px;
+}
+
+.flexbox-item::after {
+    position: absolute;
+    color: black;
+    font-size: 25px;
+    top: 10px;
+    right: 15px;
+}
+
+.flexbox-item-1::after {
+    content: '1';
+}
+
+.flexbox-item-2::after {
+    content: '2';
+}
+
+.flexbox-item-3::after {
+    content: '3';
+}
+
+.flexbox-item-4::after {
+    content: '4';
+}
+
+.flexbox-item-5::after {
+    content: '5';
+}
+
+.flexbox-item-6::after {
+    content: '6';
+}
+
