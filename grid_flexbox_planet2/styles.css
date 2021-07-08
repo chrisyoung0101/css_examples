@@ -63,6 +63,10 @@ body {
 
 .planet {
   grid-area: planet;
+  /* style individual grid item */
+  justify-self: center;
+  /* style individual grid item */
+  align-self: center;
 }
 
 .content {
