@@ -12,19 +12,39 @@
 </head>
 
 <body>
-    <div class="wrapper">
-        <div class="box planet">
-            <h1>Planet</h1>
+
+    <!-- 
+        grid-container : contains all the grid items 
+        grid-item : common styles for all grid-items
+        grid-item styling by type :
+            grid-item-content
+            grid-item-sidebar
+            grid-item-footer
+
+        flexbox-container-sidebar : flexbox container for sidebar items
+        flexbox-container-footer : flexbox container for footer items
+        flexbox-item : commone to all flexbox items
+        flex-sidebar-item : specific to sidebar items
+        flex-footer-item : specific to footer items
+
+
+
+    -->
+
+
+    <div class="grid-container">
+        <div class="grid-item grid-item-content">
+            <h1>Some Content</h1>
         </div>
-        <div class="box content">
-            <div class="flexbox-container-content">
-                <div class="flexbox-item flex-content-item"></div>
-                <div class="flexbox-item flex-content-item"></div>
-                <div class="flexbox-item flex-content-item"></div>
-                <div class="flexbox-item flex-content-item"></div>
+        <div class="grid-item grid-item-sidebar">
+            <div class="flexbox-container-sidebar">
+                <div class="flexbox-item flex-sidebar-item"></div>
+                <div class="flexbox-item flex-sidebar-item"></div>
+                <div class="flexbox-item flex-sidebar-item"></div>
+                <div class="flexbox-item flex-sidebar-item"></div>
             </div>
         </div>
-        <div class="box footer">
+        <div class="grid-item grid-item-footer">
             <div class="flexbox-container-footer">
                 <div class="flexbox-item flex-footer-item"></div>
                 <div class="flexbox-item flex-footer-item"></div>

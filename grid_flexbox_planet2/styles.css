@@ -8,16 +8,29 @@ body {
   margin: 40px;
 }
 
+/* grid-container : contains all the grid items 
+grid-item : common styles for all grid-items
+grid-item styling by type :
+    grid-item-content
+    grid-item-sidebar
+    grid-item-footer
+
+flexbox-container-sidebar : flexbox container for sidebar items
+flexbox-container-footer : flexbox container for footer items
+flexbox-item : commone to all flexbox items
+flex-sidebar-item : specific to sidebar items
+flex-footer-item : specific to footer items */
+
 /* Flexbox */
 
-.flexbox-container-content {
+.flexbox-container-sidebar {
   display: flex;
   position: relative;
   background-color: yellow;
   flex-direction: column;
 }
 
-.flex-content-item {
+.flex-sidebar-item {
   display: flex;
   position: relative;
   background-color: yellow;
@@ -61,34 +74,34 @@ body {
 
 /* Grid */
 
-.planet {
-  grid-area: planet;
+.grid-item-content {
+  grid-area: grid-item-content;
   /* style individual grid item */
   justify-self: center;
   /* style individual grid item */
   align-self: center;
 }
 
-.content {
-  grid-area: content;
+.grid-item-sidebar {
+  grid-area: grid-item-sidebar;
 }
 
-.footer {
+.grid-item-footer {
   grid-area: footer;
 }
 
-.wrapper {
+.grid-container {
   display: grid;
   grid-gap: 10px;
   grid-template-columns: 1fr 1fr 1fr;
   grid-template-areas:
-    'planet planet content '
+    'grid-item-content grid-item-content grid-item-sidebar '
     'footer  footer  footer';
-  background-color: #fff;
+  background-color: rgb(226, 167, 17);
   color: #444;
 }
 
-.box {
+.grid-item {
   background-color: #444;
   color: #fff;
   border-radius: 5px;
@@ -96,6 +109,6 @@ body {
   font-size: 150%;
 }
 
-.footer {
+.grid-item-footer {
   background-color: #999;
 }
